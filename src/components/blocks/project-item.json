@@ -1,0 +1,49 @@
+{
+  "collectionName": "components_blocks_project_items",
+  "info": {
+    "displayName": "project item"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "links": {
+      "type": "component",
+      "repeatable": true,
+      "component": "business.contact"
+    },
+    "img": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "progress": {
+      "type": "enumeration",
+      "enum": [
+        "todo",
+        "inprogress",
+        "halfway",
+        "almost",
+        "done"
+      ]
+    },
+    "date": {
+      "type": "date"
+    },
+    "showOnPage": {
+      "type": "boolean",
+      "default": true,
+      "required": true
+    },
+    "order": {
+      "type": "integer",
+      "min": 0
+    }
+  }
+}

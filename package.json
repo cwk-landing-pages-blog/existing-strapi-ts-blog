@@ -1,7 +1,9 @@
 {
   "dependencies": {
+    "@ckeditor/strapi-plugin-ckeditor": "^0.0.7",
     "@strapi/plugin-graphql": "^4.0.5",
     "@strapi/plugin-i18n": "4.10.5",
+    "@strapi/plugin-seo": "^1.9.0",
     "@strapi/plugin-users-permissions": "4.10.5",
     "@strapi/provider-upload-aws-s3": "^4.10.7",
     "@strapi/strapi": "4.10.5",
