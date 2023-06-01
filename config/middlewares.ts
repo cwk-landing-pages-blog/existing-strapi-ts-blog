@@ -17,6 +17,7 @@ module.exports = [
   "strapi::session",
   "strapi::favicon",
   "strapi::public",
+
   {
     name: "strapi::security",
     config: {
@@ -29,6 +30,7 @@ module.exports = [
             "data:",
             "blob:",
             "dl.airtable.com",
+            'strapi-cwk.s3.eu-south-1.amazonaws.com',
             "https://cwk-startup.onrender.com",
             "https://strapi-7rig.onrender.com",
             "localhost:1338",
@@ -38,6 +40,7 @@ module.exports = [
             "data:",
             "blob:",
             "dl.airtable.com",
+            'strapi-cwk.s3.eu-south-1.amazonaws.com',
             "https://cwk-startup.onrender.com",
             "https://strapi-7rig.onrender.com",
           ],

@@ -1,0 +1,51 @@
+{
+  "collectionName": "components_business_testimonial_items",
+  "info": {
+    "displayName": "testimonial_item",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "comment": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "order": {
+      "type": "integer",
+      "min": 0
+    },
+    "date": {
+      "type": "date"
+    },
+    "rating": {
+      "type": "integer",
+      "min": 0,
+      "max": 10,
+      "default": 10,
+      "required": true
+    },
+    "showOnPage": {
+      "type": "boolean",
+      "default": true,
+      "required": true
+    },
+    "comment_link": {
+      "type": "string"
+    },
+    "author": {
+      "type": "string"
+    },
+    "author_link": {
+      "type": "string"
+    },
+    "author_avatar": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

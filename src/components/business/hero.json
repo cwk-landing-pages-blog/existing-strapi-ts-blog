@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_business_heroes",
+  "info": {
+    "displayName": "Hero"
+  },
+  "options": {},
+  "attributes": {
+    "showOnPage": {
+      "type": "boolean",
+      "default": true
+    },
+    "img": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "section": {
+      "displayName": "section title",
+      "type": "component",
+      "repeatable": false,
+      "component": "blocks.section-title"
+    }
+  }
+}

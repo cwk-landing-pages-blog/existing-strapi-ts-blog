@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_blocks_section_titles",
+  "info": {
+    "displayName": "section title"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "string"
+    },
+    "hasDivider": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "cta_title": {
+      "type": "string"
+    },
+    "cta_link": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "collectionName": "components_shared_social_networks",
+  "info": {
+    "displayName": "social_networks"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "showOnPage": {
+      "type": "boolean",
+      "default": true,
+      "required": true
+    },
+    "href": {
+      "type": "string"
+    },
+    "note": {
+      "type": "string"
+    },
+    "icon": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "display_name": {
+      "type": "string"
+    }
+  }
+}
