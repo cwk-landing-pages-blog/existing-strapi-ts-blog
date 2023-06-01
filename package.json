@@ -21,15 +21,16 @@
   },
   "devDependencies": {},
   "author": {
-    "name": "A Strapi developer"
+    "name": "A Strapi developer kolpaja"
   },
   "strapi": {
     "uuid": "ded32087-0ae8-46fc-b6a7-1535f8aa3958",
     "template": "@strapi/template-blog"
   },
   "engines": {
-    "node": ">=14.19.1 <=18.x.x",
-    "npm": ">=6.0.0"
+    "node": "16.19.0",
+    "yarn": "1.22.19",
+    "npm": "8.19.3"
   },
   "license": "MIT"
 }
