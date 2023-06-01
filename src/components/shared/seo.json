@@ -23,6 +23,9 @@
       "allowedTypes": [
         "images"
       ]
+    },
+    "keywords": {
+      "type": "string"
     }
   }
 }
