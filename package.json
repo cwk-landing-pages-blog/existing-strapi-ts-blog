@@ -10,7 +10,8 @@
     "better-sqlite3": "8.0.1",
     "fs-extra": "^10.0.0",
     "lodash.set": "^4.3.2",
-    "mime-types": "^2.1.27"
+    "mime-types": "^2.1.27",
+    "pg": "^8.11.0"
   },
   "name": "strapi-ts-blog",
   "private": true,
