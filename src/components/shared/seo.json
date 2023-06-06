@@ -1,21 +1,18 @@
 {
-  "collectionName": "components_business_service_items",
+  "collectionName": "components_shared_seos",
   "info": {
-    "displayName": "service_item",
+    "displayName": "Seo",
     "description": ""
   },
   "options": {},
   "attributes": {
-    "title": {
+    "meta_title": {
       "type": "string"
     },
     "description": {
       "type": "text"
     },
-    "date": {
-      "type": "date"
-    },
-    "img": {
+    "meta_img": {
       "type": "media",
       "multiple": false,
       "required": false,
@@ -23,19 +20,13 @@
         "images"
       ]
     },
-    "order": {
-      "type": "integer",
-      "min": 0
-    },
-    "showOnCard": {
-      "type": "boolean",
-      "default": true,
-      "required": true
-    },
-    "badge": {
+    "keywords": {
       "type": "string"
     },
-    "action_link": {
+    "canonical_url": {
+      "type": "string"
+    },
+    "meta_robots": {
       "type": "string"
     }
   }

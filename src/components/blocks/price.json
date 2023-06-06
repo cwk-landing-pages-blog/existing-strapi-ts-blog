@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_blocks_prices",
+  "info": {
+    "displayName": "price"
+  },
+  "options": {},
+  "attributes": {
+    "symbol": {
+      "type": "string"
+    },
+    "amount": {
+      "type": "decimal"
+    },
+    "isDiscounted": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "discounted_amount": {
+      "type": "decimal"
+    },
+    "label": {
+      "type": "string"
+    }
+  }
+}

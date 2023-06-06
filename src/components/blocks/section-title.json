@@ -1,7 +1,8 @@
 {
   "collectionName": "components_blocks_section_titles",
   "info": {
-    "displayName": "section title"
+    "displayName": "section title",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -21,6 +22,21 @@
     },
     "cta_link": {
       "type": "string"
+    },
+    "section_img": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    },
+    "bg": {
+      "type": "enumeration",
+      "enum": [
+        "dark",
+        "light"
+      ]
     }
   }
 }

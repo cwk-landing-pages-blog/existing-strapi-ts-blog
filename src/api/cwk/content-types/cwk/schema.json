@@ -1,0 +1,18 @@
+{
+  "kind": "singleType",
+  "collectionName": "cwks",
+  "info": {
+    "singularName": "cwk",
+    "pluralName": "cwks",
+    "displayName": "CWK"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    }
+  }
+}

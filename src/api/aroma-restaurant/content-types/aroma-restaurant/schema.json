@@ -1,0 +1,85 @@
+{
+  "kind": "singleType",
+  "collectionName": "aroma_restaurants",
+  "info": {
+    "singularName": "aroma-restaurant",
+    "pluralName": "aroma-restaurants",
+    "displayName": "Aroma Restaurant",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "featured_img": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "our_story_title": {
+      "type": "component",
+      "repeatable": false,
+      "component": "blocks.section-title"
+    },
+    "our_strength": {
+      "type": "component",
+      "repeatable": false,
+      "component": "blocks.section-title"
+    },
+    "services_title": {
+      "type": "component",
+      "repeatable": false,
+      "component": "blocks.section-title"
+    },
+    "services_items": {
+      "type": "component",
+      "repeatable": true,
+      "component": "business.service-item"
+    },
+    "special_section": {
+      "type": "component",
+      "repeatable": false,
+      "component": "blocks.section-title"
+    },
+    "social_networks": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.social-networks"
+    },
+    "heros": {
+      "type": "component",
+      "repeatable": true,
+      "component": "business.hero"
+    },
+    "contacts": {
+      "type": "component",
+      "repeatable": true,
+      "component": "business.contact"
+    },
+    "we_offer_title": {
+      "type": "component",
+      "repeatable": false,
+      "component": "blocks.section-title"
+    },
+    "we_offer_items": {
+      "type": "component",
+      "repeatable": true,
+      "component": "business.service-item"
+    },
+    "open_hours": {
+      "type": "component",
+      "repeatable": false,
+      "component": "business.open-hours"
+    }
+  }
+}

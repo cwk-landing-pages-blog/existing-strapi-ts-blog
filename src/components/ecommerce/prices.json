@@ -1,0 +1,34 @@
+{
+  "collectionName": "components_ecommerce_price_amounts",
+  "info": {
+    "displayName": "prices"
+  },
+  "options": {},
+  "attributes": {
+    "badge": {
+      "type": "string"
+    },
+    "isDiscounted": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "discounted_amount": {
+      "type": "decimal"
+    },
+    "amount": {
+      "type": "decimal"
+    },
+    "currency": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::currency.currency"
+    },
+    "discount_percentage": {
+      "type": "decimal"
+    },
+    "note": {
+      "type": "string"
+    }
+  }
+}
