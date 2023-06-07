@@ -61,6 +61,17 @@
       "type": "component",
       "repeatable": false,
       "component": "shared.seo"
+    },
+    "orders": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::order.order",
+      "mappedBy": "products"
+    },
+    "my_developed_app": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::app.app"
     }
   }
 }

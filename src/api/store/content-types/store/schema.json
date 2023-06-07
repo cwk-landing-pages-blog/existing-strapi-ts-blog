@@ -4,7 +4,8 @@
   "info": {
     "singularName": "store",
     "pluralName": "stores",
-    "displayName": "Store"
+    "displayName": "Natural Stone Store",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
