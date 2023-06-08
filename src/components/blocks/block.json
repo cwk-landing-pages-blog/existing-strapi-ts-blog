@@ -1,0 +1,42 @@
+{
+  "collectionName": "components_blocks_blocks",
+  "info": {
+    "displayName": "block",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email"
+    },
+    "number": {
+      "type": "decimal"
+    },
+    "media": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "date": {
+      "type": "datetime"
+    },
+    "isTrue": {
+      "type": "boolean"
+    },
+    "json": {
+      "type": "json"
+    },
+    "long_text": {
+      "type": "text"
+    }
+  }
+}
