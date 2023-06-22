@@ -1,7 +1,8 @@
 {
   "collectionName": "components_business_menu_items",
   "info": {
-    "displayName": "Menu Item"
+    "displayName": "Menu Item",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -34,11 +35,12 @@
       "customField": "plugin::ckeditor.CKEditor"
     },
     "img": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     },
     "isFeatured": {
       "type": "boolean",
@@ -52,6 +54,28 @@
       "type": "component",
       "repeatable": false,
       "component": "shared.seo"
+    },
+    "showOnCard": {
+      "type": "boolean"
+    },
+    "category": {
+      "type": "enumeration",
+      "enum": [
+        "al_forne",
+        "bread",
+        "chicken_dishes",
+        "drinks",
+        "other",
+        "pasta",
+        "pesce",
+        "pizza",
+        "rissotto",
+        "sauces",
+        "side_orders",
+        "starters",
+        "steaks",
+        "sweets"
+      ]
     }
   }
 }

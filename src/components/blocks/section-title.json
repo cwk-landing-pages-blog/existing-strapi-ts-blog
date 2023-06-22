@@ -24,12 +24,12 @@
       "type": "string"
     },
     "section_img": {
-      "allowedTypes": [
-        "images"
-      ],
       "type": "media",
       "multiple": false,
-      "required": true
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
     },
     "bg": {
       "type": "enumeration",
@@ -37,6 +37,9 @@
         "dark",
         "light"
       ]
+    },
+    "cta_slogan": {
+      "type": "string"
     }
   }
 }

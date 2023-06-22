@@ -1,0 +1,33 @@
+{
+  "collectionName": "components_blocks_items",
+  "info": {
+    "displayName": "item"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "showOnPage": {
+      "type": "boolean",
+      "default": true,
+      "required": true
+    },
+    "img": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "cta_link": {
+      "type": "string"
+    },
+    "cta_label": {
+      "type": "string"
+    }
+  }
+}

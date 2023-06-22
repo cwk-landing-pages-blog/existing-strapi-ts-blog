@@ -114,7 +114,6 @@
       },
       "type": "dynamiczone",
       "components": [
-        "blocks.rich-section-title",
         "blocks.section-title"
       ]
     },
@@ -127,6 +126,37 @@
         }
       },
       "component": "shared.seo"
+    },
+    "expert_flooring_installer": {
+      "type": "component",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "blocks.section-title"
+    },
+    "our_business_statistics": {
+      "displayName": "statistics",
+      "type": "component",
+      "repeatable": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "business.statistics"
+    },
+    "google_map_location": {
+      "type": "component",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "business.google-map-location"
     }
   }
 }

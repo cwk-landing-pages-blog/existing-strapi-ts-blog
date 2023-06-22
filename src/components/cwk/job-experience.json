@@ -1,0 +1,46 @@
+{
+  "collectionName": "components_cwk_job_experiences",
+  "info": {
+    "displayName": "job_experience",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "company": {
+      "type": "string"
+    },
+    "position": {
+      "type": "string"
+    },
+    "started_date": {
+      "type": "date"
+    },
+    "description": {
+      "type": "string"
+    },
+    "end_date": {
+      "type": "date"
+    },
+    "isCurrent": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "company_link": {
+      "type": "string"
+    },
+    "card_img": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "coding_teches": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::coding-tech.coding-tech"
+    }
+  }
+}

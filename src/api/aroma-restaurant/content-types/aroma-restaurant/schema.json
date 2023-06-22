@@ -80,6 +80,21 @@
       "type": "component",
       "repeatable": false,
       "component": "business.open-hours"
+    },
+    "menu_title": {
+      "type": "component",
+      "repeatable": false,
+      "component": "blocks.section-title"
+    },
+    "menu_items": {
+      "type": "component",
+      "repeatable": true,
+      "component": "business.menu-item"
+    },
+    "google_map_location": {
+      "type": "component",
+      "repeatable": false,
+      "component": "business.google-map-location"
     }
   }
 }

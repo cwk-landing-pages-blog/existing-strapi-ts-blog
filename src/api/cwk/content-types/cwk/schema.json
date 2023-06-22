@@ -4,7 +4,8 @@
   "info": {
     "singularName": "cwk",
     "pluralName": "cwks",
-    "displayName": "CWK"
+    "displayName": "CWK",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -13,6 +14,59 @@
   "attributes": {
     "title": {
       "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "social_networks": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.social-networks"
+    },
+    "my_experience": {
+      "displayName": "job_experience",
+      "type": "component",
+      "repeatable": true,
+      "component": "cwk.job-experience"
+    },
+    "my_developed_apps": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::app.app"
+    },
+    "blog_posts": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::post.post"
+    },
+    "contact": {
+      "type": "component",
+      "repeatable": true,
+      "component": "business.contact"
+    },
+    "personal_touch": {
+      "type": "component",
+      "repeatable": false,
+      "component": "blocks.section-title"
+    },
+    "personal_touch_item": {
+      "displayName": "item",
+      "type": "component",
+      "repeatable": true,
+      "component": "blocks.item"
+    },
+    "my_spoken_languages": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::my-spoken-language.my-spoken-language"
+    },
+    "about_me": {
+      "type": "customField",
+      "options": {
+        "output": "HTML",
+        "preset": "light"
+      },
+      "customField": "plugin::ckeditor.CKEditor"
     }
   }
 }

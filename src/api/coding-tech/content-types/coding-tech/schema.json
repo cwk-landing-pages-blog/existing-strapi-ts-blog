@@ -1,0 +1,34 @@
+{
+  "kind": "collectionType",
+  "collectionName": "coding_techs",
+  "info": {
+    "singularName": "coding-tech",
+    "pluralName": "coding-techs",
+    "displayName": "coding techs"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "label": {
+      "type": "string"
+    },
+    "short_desc": {
+      "type": "string"
+    },
+    "link": {
+      "type": "string"
+    },
+    "react_icons_string": {
+      "type": "string",
+      "required": true
+    },
+    "my_developed_apps": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::app.app",
+      "mappedBy": "coding_techs"
+    }
+  }
+}

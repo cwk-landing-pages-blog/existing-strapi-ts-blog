@@ -47,6 +47,12 @@
         "ecommerce",
         "native"
       ]
+    },
+    "coding_techs": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::coding-tech.coding-tech",
+      "inversedBy": "my_developed_apps"
     }
   }
 }
