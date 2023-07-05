@@ -26,7 +26,7 @@
     "section_img": {
       "type": "media",
       "multiple": false,
-      "required": true,
+      "required": false,
       "allowedTypes": [
         "images"
       ]
@@ -35,11 +35,15 @@
       "type": "enumeration",
       "enum": [
         "dark",
-        "light"
+        "light",
+        "other"
       ]
     },
     "cta_slogan": {
       "type": "string"
+    },
+    "description": {
+      "type": "text"
     }
   }
 }

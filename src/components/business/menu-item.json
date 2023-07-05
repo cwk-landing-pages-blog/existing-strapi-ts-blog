@@ -76,6 +76,11 @@
         "steaks",
         "sweets"
       ]
+    },
+    "showOnLinkTree": {
+      "type": "boolean",
+      "default": false,
+      "required": true
     }
   }
 }
