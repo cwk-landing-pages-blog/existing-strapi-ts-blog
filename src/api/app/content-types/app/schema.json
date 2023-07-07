@@ -53,6 +53,16 @@
       "relation": "manyToMany",
       "target": "api::coding-tech.coding-tech",
       "inversedBy": "my_developed_apps"
+    },
+    "code": {
+      "type": "string",
+      "unique": true
+    },
+    "blog_post": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::post.post",
+      "inversedBy": "my_developed_apps"
     }
   }
 }

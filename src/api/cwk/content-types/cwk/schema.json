@@ -34,11 +34,6 @@
       "relation": "oneToMany",
       "target": "api::app.app"
     },
-    "blog_posts": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::post.post"
-    },
     "contact": {
       "type": "component",
       "repeatable": true,

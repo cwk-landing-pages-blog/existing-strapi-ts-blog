@@ -1,7 +1,8 @@
 {
   "collectionName": "components_shared_social_networks",
   "info": {
-    "displayName": "social_networks"
+    "displayName": "social_networks",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -22,15 +23,13 @@
     "note": {
       "type": "string"
     },
-    "icon": {
-      "allowedTypes": [
-        "images"
-      ],
-      "type": "media",
-      "multiple": false
-    },
     "display_name": {
       "type": "string"
+    },
+    "icon": {
+      "type": "string",
+      "required": true,
+      "default": "instagram"
     }
   }
 }

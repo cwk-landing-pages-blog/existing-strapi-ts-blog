@@ -48,6 +48,12 @@
     "slug": {
       "type": "uid",
       "targetField": "title"
+    },
+    "my_developed_apps": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::app.app",
+      "mappedBy": "blog_post"
     }
   }
 }

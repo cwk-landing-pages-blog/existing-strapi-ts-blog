@@ -29,18 +29,14 @@
     "company_link": {
       "type": "string"
     },
-    "card_img": {
-      "type": "media",
-      "multiple": false,
-      "required": false,
-      "allowedTypes": [
-        "images"
-      ]
+    "color_hashtag": {
+      "type": "string"
     },
-    "coding_teches": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::coding-tech.coding-tech"
+    "techs_used": {
+      "type": "string"
+    },
+    "icon": {
+      "type": "string"
     }
   }
 }

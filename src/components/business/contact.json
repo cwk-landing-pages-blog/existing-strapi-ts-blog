@@ -1,7 +1,8 @@
 {
   "collectionName": "components_business_contacts",
   "info": {
-    "displayName": "contact"
+    "displayName": "contact",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -20,6 +21,9 @@
         "_blank",
         "_self"
       ]
+    },
+    "icon": {
+      "type": "string"
     }
   }
 }
