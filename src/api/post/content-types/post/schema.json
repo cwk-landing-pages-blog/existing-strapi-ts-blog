@@ -52,8 +52,7 @@
     "my_developed_apps": {
       "type": "relation",
       "relation": "oneToMany",
-      "target": "api::app.app",
-      "mappedBy": "blog_post"
+      "target": "api::app.app"
     }
   }
 }

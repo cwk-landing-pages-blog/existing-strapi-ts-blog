@@ -24,12 +24,6 @@
     "react_icons_string": {
       "type": "string",
       "required": true
-    },
-    "my_developed_apps": {
-      "type": "relation",
-      "relation": "manyToMany",
-      "target": "api::app.app",
-      "mappedBy": "coding_techs"
     }
   }
 }
