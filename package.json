@@ -12,7 +12,8 @@
     "fs-extra": "^10.0.0",
     "lodash.set": "^4.3.2",
     "mime-types": "^2.1.27",
-    "pg": "^8.11.0"
+    "pg": "^8.11.0",
+    "strapi-google-auth": "^0.1.2"
   },
   "name": "strapi-ts-blog",
   "private": true,
