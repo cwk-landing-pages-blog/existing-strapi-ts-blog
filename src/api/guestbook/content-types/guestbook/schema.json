@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "guestbooks",
+  "info": {
+    "singularName": "guestbook",
+    "pluralName": "guestbooks",
+    "displayName": "guestbook",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "comment": {
+      "type": "string"
+    },
+    "app_code": {
+      "type": "string"
+    },
+    "cwk_user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::cwk-user.cwk-user"
+    },
+    "reactions": {
+      "type": "json"
+    }
+  }
+}
