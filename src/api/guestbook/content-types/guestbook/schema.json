@@ -13,18 +13,23 @@
   "pluginOptions": {},
   "attributes": {
     "comment": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "app_code": {
-      "type": "string"
-    },
-    "cwk_user": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::cwk-user.cwk-user"
+      "type": "string",
+      "required": true
     },
     "reactions": {
       "type": "json"
+    },
+    "visitor": {
+      "type": "email",
+      "required": true
+    },
+    "display_name": {
+      "type": "string",
+      "required": true
     }
   }
 }

@@ -20,5 +20,6 @@ export default {
         middlewares: ['api::cwk-user.auth-cwk-user'],
       },
     },
+
   ],
 };
