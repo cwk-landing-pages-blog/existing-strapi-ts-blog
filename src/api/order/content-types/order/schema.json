@@ -4,7 +4,8 @@
   "info": {
     "singularName": "order",
     "pluralName": "orders",
-    "displayName": "orders"
+    "displayName": "orders",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -12,7 +13,8 @@
   "pluginOptions": {},
   "attributes": {
     "name": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "status": {
       "type": "enumeration",
@@ -26,7 +28,8 @@
       ]
     },
     "total_amount": {
-      "type": "decimal"
+      "type": "decimal",
+      "required": true
     },
     "customer": {
       "displayName": "customer",

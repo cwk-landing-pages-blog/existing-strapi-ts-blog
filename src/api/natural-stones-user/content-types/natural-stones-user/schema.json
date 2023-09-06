@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "natural_stones_users",
+  "info": {
+    "singularName": "natural-stones-user",
+    "pluralName": "natural-stones-users",
+    "displayName": "Natural Stones Users",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email",
+      "required": true
+    },
+    "img_url": {
+      "type": "string"
+    }
+  }
+}
