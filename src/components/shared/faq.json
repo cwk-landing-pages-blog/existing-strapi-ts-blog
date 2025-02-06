@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_shared_faqs",
+  "info": {
+    "displayName": "faq"
+  },
+  "options": {},
+  "attributes": {
+    "question": {
+      "type": "string"
+    },
+    "notes": {
+      "type": "text"
+    },
+    "showOnPage": {
+      "type": "boolean",
+      "default": true,
+      "required": true
+    },
+    "order": {
+      "type": "integer",
+      "min": 0
+    },
+    "answer": {
+      "type": "richtext"
+    }
+  }
+}

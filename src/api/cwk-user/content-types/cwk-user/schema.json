@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "cwk_users",
+  "info": {
+    "singularName": "cwk-user",
+    "pluralName": "cwk-users",
+    "displayName": "CWK User",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "email": {
+      "type": "email",
+      "required": true
+    },
+    "full_name": {
+      "type": "string"
+    },
+    "isSoftDeleted": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "img_url": {
+      "type": "string"
+    }
+  }
+}

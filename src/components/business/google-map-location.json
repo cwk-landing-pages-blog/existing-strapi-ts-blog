@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_business_google_map_locations",
+  "info": {
+    "displayName": "google_map_location"
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "iframe_string": {
+      "type": "text"
+    },
+    "link": {
+      "type": "string"
+    },
+    "isAvailable": {
+      "type": "boolean",
+      "default": true,
+      "required": true
+    }
+  }
+}

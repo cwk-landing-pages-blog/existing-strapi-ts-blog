@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_blocks_ctas",
+  "info": {
+    "displayName": "cta"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "string"
+    },
+    "href": {
+      "type": "string"
+    },
+    "target": {
+      "type": "enumeration",
+      "enum": [
+        "_blank",
+        "_self"
+      ]
+    }
+  }
+}

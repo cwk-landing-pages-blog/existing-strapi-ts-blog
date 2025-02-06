@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_blocks_rich_text2s",
+  "info": {
+    "displayName": "richText2"
+  },
+  "options": {},
+  "attributes": {
+    "Standart": {
+      "type": "customField",
+      "options": {
+        "output": "HTML",
+        "preset": "standard"
+      },
+      "customField": "plugin::ckeditor.CKEditor"
+    }
+  }
+}

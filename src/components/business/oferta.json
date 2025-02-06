@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_business_ofertas",
+  "info": {
+    "displayName": "oferta",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "showOnPage": {
+      "type": "boolean",
+      "default": true,
+      "required": true
+    },
+    "subtitle": {
+      "type": "string"
+    },
+    "umrah_trips": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::umrah-trip.umrah-trip"
+    }
+  }
+}

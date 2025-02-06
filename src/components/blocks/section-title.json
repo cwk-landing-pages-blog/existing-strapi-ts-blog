@@ -1,0 +1,49 @@
+{
+  "collectionName": "components_blocks_section_titles",
+  "info": {
+    "displayName": "section title",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "string"
+    },
+    "hasDivider": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "cta_title": {
+      "type": "string"
+    },
+    "cta_link": {
+      "type": "string"
+    },
+    "section_img": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "bg": {
+      "type": "enumeration",
+      "enum": [
+        "dark",
+        "light",
+        "other"
+      ]
+    },
+    "cta_slogan": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    }
+  }
+}

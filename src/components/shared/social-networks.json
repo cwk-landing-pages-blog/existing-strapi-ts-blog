@@ -1,0 +1,35 @@
+{
+  "collectionName": "components_shared_social_networks",
+  "info": {
+    "displayName": "social_networks",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "showOnPage": {
+      "type": "boolean",
+      "default": true,
+      "required": true
+    },
+    "href": {
+      "type": "string"
+    },
+    "note": {
+      "type": "string"
+    },
+    "display_name": {
+      "type": "string"
+    },
+    "icon": {
+      "type": "string",
+      "required": true,
+      "default": "instagram"
+    }
+  }
+}

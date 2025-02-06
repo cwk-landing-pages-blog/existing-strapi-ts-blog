@@ -1,0 +1,86 @@
+{
+  "collectionName": "components_business_menu_items",
+  "info": {
+    "displayName": "Menu Item",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "ingredients": {
+      "type": "string"
+    },
+    "isAvailable": {
+      "type": "boolean",
+      "default": true,
+      "required": true
+    },
+    "price": {
+      "displayName": "price",
+      "type": "component",
+      "repeatable": false,
+      "component": "blocks.price"
+    },
+    "recipe": {
+      "type": "customField",
+      "options": {
+        "output": "HTML",
+        "preset": "light"
+      },
+      "customField": "plugin::ckeditor.CKEditor"
+    },
+    "img": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "isFeatured": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "order": {
+      "type": "integer"
+    },
+    "seo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.seo"
+    },
+    "showOnCard": {
+      "type": "boolean"
+    },
+    "category": {
+      "type": "enumeration",
+      "enum": [
+        "al_forne",
+        "bread",
+        "chicken_dishes",
+        "drinks",
+        "other",
+        "pasta",
+        "pesce",
+        "pizza",
+        "rissotto",
+        "sauces",
+        "side_orders",
+        "starters",
+        "steaks",
+        "sweets"
+      ]
+    },
+    "showOnLinkTree": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    }
+  }
+}

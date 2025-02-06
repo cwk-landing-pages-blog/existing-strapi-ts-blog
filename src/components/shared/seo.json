@@ -1,0 +1,37 @@
+{
+  "collectionName": "components_shared_seos",
+  "info": {
+    "displayName": "Seo",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "meta_title": {
+      "type": "string",
+      "maxLength": 60
+    },
+    "description": {
+      "type": "text",
+      "maxLength": 160
+    },
+    "meta_img": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "keywords": {
+      "type": "string",
+      "regex": "[^,]+",
+      "maxLength": 165
+    },
+    "canonical_url": {
+      "type": "string"
+    },
+    "meta_robots": {
+      "type": "string"
+    }
+  }
+}

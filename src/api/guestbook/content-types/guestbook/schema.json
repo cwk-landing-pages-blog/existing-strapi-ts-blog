@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "guestbooks",
+  "info": {
+    "singularName": "guestbook",
+    "pluralName": "guestbooks",
+    "displayName": "guestbook",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "comment": {
+      "type": "string",
+      "required": true
+    },
+    "app_code": {
+      "type": "string",
+      "required": true
+    },
+    "reactions": {
+      "type": "json"
+    },
+    "visitor": {
+      "type": "email",
+      "required": true
+    },
+    "display_name": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

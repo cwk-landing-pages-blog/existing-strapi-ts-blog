@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_blocks_rich_section_titles",
+  "info": {
+    "displayName": "RichSectionTitle"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "customField",
+      "options": {
+        "preset": "light",
+        "maxLengthCharacters": 160
+      },
+      "customField": "plugin::ckeditor.CKEditor",
+      "required": true
+    },
+    "description": {
+      "type": "text"
+    }
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "collectionName": "components_cwk_job_experiences",
+  "info": {
+    "displayName": "job_experience",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "company": {
+      "type": "string"
+    },
+    "position": {
+      "type": "string"
+    },
+    "started_date": {
+      "type": "date"
+    },
+    "description": {
+      "type": "string"
+    },
+    "end_date": {
+      "type": "date"
+    },
+    "isCurrent": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "company_link": {
+      "type": "string"
+    },
+    "color_hashtag": {
+      "type": "string"
+    },
+    "techs_used": {
+      "type": "string"
+    },
+    "icon": {
+      "type": "string"
+    }
+  }
+}
