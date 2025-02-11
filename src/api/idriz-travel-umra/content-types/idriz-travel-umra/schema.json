@@ -18,12 +18,6 @@
     "description": {
       "type": "text"
     },
-    "services": {
-      "displayName": "service-light",
-      "type": "component",
-      "repeatable": true,
-      "component": "business.service-light"
-    },
     "oferta": {
       "displayName": "oferta",
       "type": "component",

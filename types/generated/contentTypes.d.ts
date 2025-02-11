@@ -726,7 +726,6 @@ export interface ApiIdrizTravelUmraIdrizTravelUmra
       Schema.Attribute.Private;
     oferta: Schema.Attribute.Component<'business.oferta', false>;
     publishedAt: Schema.Attribute.DateTime;
-    services: Schema.Attribute.Component<'business.service-light', true>;
     Title: Schema.Attribute.String;
     umreRamadan: Schema.Attribute.Component<'idriz-umrah-block.ramadan', true>;
     updatedAt: Schema.Attribute.DateTime;

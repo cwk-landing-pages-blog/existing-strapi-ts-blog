@@ -387,9 +387,17 @@ export interface IdrizUmrahBlockInfo extends Struct.ComponentSchema {
 export interface IdrizUmrahBlockRamadan extends Struct.ComponentSchema {
   collectionName: 'components_idriz_umrah_block_ramadans';
   info: {
+    description: '';
     displayName: 'ramadan';
   };
   attributes: {
+    content: Schema.Attribute.RichText &
+      Schema.Attribute.CustomField<
+        'plugin::ckeditor5.CKEditor',
+        {
+          preset: 'defaultHtml';
+        }
+      >;
     ramadan_year: Schema.Attribute.Integer &
       Schema.Attribute.Required &
       Schema.Attribute.SetMinMax<
