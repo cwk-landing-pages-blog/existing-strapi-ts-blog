@@ -495,14 +495,6 @@ export interface ApiCwkCwk extends Struct.SingleTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
-    about_me: Schema.Attribute.RichText &
-      Schema.Attribute.CustomField<
-        'plugin::ckeditor.CKEditor',
-        {
-          output: 'HTML';
-          preset: 'light';
-        }
-      >;
     contact: Schema.Attribute.Component<'business.contact', true>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -726,7 +718,6 @@ export interface ApiIdrizTravelUmraIdrizTravelUmra
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     description: Schema.Attribute.Text;
-    info: Schema.Attribute.Component<'idriz-umrah-block.info', false>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -862,17 +853,23 @@ export interface ApiUmrahTripUmrahTrip extends Struct.CollectionTypeSchema {
           localized: true;
         };
       }>;
-    createdAt: Schema.Attribute.DateTime;
-    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    departing: Schema.Attribute.Date &
-      Schema.Attribute.Required &
+    content: Schema.Attribute.RichText &
+      Schema.Attribute.CustomField<
+        'plugin::ckeditor5.CKEditor',
+        {
+          preset: 'defaultHtml';
+        }
+      > &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
         };
       }>;
-    description: Schema.Attribute.Component<'blocks.rich-text', false> &
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    departing: Schema.Attribute.Date &
+      Schema.Attribute.Required &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;

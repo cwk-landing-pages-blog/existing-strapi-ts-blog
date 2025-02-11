@@ -94,77 +94,6 @@ export interface BlocksProjectItem extends Struct.ComponentSchema {
   };
 }
 
-export interface BlocksRichSectionTitle extends Struct.ComponentSchema {
-  collectionName: 'components_blocks_rich_section_titles';
-  info: {
-    displayName: 'RichSectionTitle';
-  };
-  attributes: {
-    description: Schema.Attribute.Text;
-    title: Schema.Attribute.RichText &
-      Schema.Attribute.Required &
-      Schema.Attribute.CustomField<
-        'plugin::ckeditor.CKEditor',
-        {
-          maxLengthCharacters: 160;
-          preset: 'light';
-        }
-      >;
-  };
-}
-
-export interface BlocksRichText extends Struct.ComponentSchema {
-  collectionName: 'components_blocks_rich_texts';
-  info: {
-    description: '';
-    displayName: 'richText';
-  };
-  attributes: {
-    light: Schema.Attribute.RichText &
-      Schema.Attribute.CustomField<
-        'plugin::ckeditor.CKEditor',
-        {
-          output: 'HTML';
-          preset: 'light';
-        }
-      >;
-  };
-}
-
-export interface BlocksRichTextFull extends Struct.ComponentSchema {
-  collectionName: 'components_blocks_rich_text_fulls';
-  info: {
-    displayName: 'richTextFull';
-  };
-  attributes: {
-    rich: Schema.Attribute.RichText &
-      Schema.Attribute.CustomField<
-        'plugin::ckeditor.CKEditor',
-        {
-          output: 'HTML';
-          preset: 'rich';
-        }
-      >;
-  };
-}
-
-export interface BlocksRichText2 extends Struct.ComponentSchema {
-  collectionName: 'components_blocks_rich_text2s';
-  info: {
-    displayName: 'richText2';
-  };
-  attributes: {
-    Standart: Schema.Attribute.RichText &
-      Schema.Attribute.CustomField<
-        'plugin::ckeditor.CKEditor',
-        {
-          output: 'HTML';
-          preset: 'standard';
-        }
-      >;
-  };
-}
-
 export interface BlocksSectionTitle extends Struct.ComponentSchema {
   collectionName: 'components_blocks_section_titles';
   info: {
@@ -282,14 +211,6 @@ export interface BusinessMenuItem extends Struct.ComponentSchema {
     name: Schema.Attribute.String;
     order: Schema.Attribute.Integer;
     price: Schema.Attribute.Component<'blocks.price', false>;
-    recipe: Schema.Attribute.RichText &
-      Schema.Attribute.CustomField<
-        'plugin::ckeditor.CKEditor',
-        {
-          output: 'HTML';
-          preset: 'light';
-        }
-      >;
     seo: Schema.Attribute.Component<'shared.seo', false>;
     showOnCard: Schema.Attribute.Boolean;
     showOnLinkTree: Schema.Attribute.Boolean &
@@ -367,10 +288,9 @@ export interface BusinessServiceLight extends Struct.ComponentSchema {
   attributes: {
     content: Schema.Attribute.RichText &
       Schema.Attribute.CustomField<
-        'plugin::ckeditor.CKEditor',
+        'plugin::ckeditor5.CKEditor',
         {
-          output: 'HTML';
-          preset: 'light';
+          preset: 'defaultHtml';
         }
       >;
     description: Schema.Attribute.Text;
@@ -461,16 +381,7 @@ export interface IdrizUmrahBlockInfo extends Struct.ComponentSchema {
   info: {
     displayName: 'info';
   };
-  attributes: {
-    umre_info: Schema.Attribute.RichText &
-      Schema.Attribute.CustomField<
-        'plugin::ckeditor.CKEditor',
-        {
-          output: 'HTML';
-          preset: 'light';
-        }
-      >;
-  };
+  attributes: {};
 }
 
 export interface IdrizUmrahBlockRamadan extends Struct.ComponentSchema {
@@ -479,14 +390,6 @@ export interface IdrizUmrahBlockRamadan extends Struct.ComponentSchema {
     displayName: 'ramadan';
   };
   attributes: {
-    content: Schema.Attribute.RichText &
-      Schema.Attribute.CustomField<
-        'plugin::ckeditor.CKEditor',
-        {
-          output: 'HTML';
-          preset: 'light';
-        }
-      >;
     ramadan_year: Schema.Attribute.Integer &
       Schema.Attribute.Required &
       Schema.Attribute.SetMinMax<
@@ -623,10 +526,6 @@ declare module '@strapi/strapi' {
       'blocks.item': BlocksItem;
       'blocks.price': BlocksPrice;
       'blocks.project-item': BlocksProjectItem;
-      'blocks.rich-section-title': BlocksRichSectionTitle;
-      'blocks.rich-text': BlocksRichText;
-      'blocks.rich-text-full': BlocksRichTextFull;
-      'blocks.rich-text2': BlocksRichText2;
       'blocks.section-title': BlocksSectionTitle;
       'business.contact': BusinessContact;
       'business.endry-item': BusinessEndryItem;

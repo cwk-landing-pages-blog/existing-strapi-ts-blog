@@ -35,12 +35,6 @@
       "type": "component",
       "repeatable": true,
       "component": "idriz-umrah-block.ramadan"
-    },
-    "info": {
-      "displayName": "info",
-      "type": "component",
-      "repeatable": false,
-      "component": "idriz-umrah-block.info"
     }
   }
 }

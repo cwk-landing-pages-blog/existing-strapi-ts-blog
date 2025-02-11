@@ -117,16 +117,6 @@
       "max": 3,
       "min": 1
     },
-    "description": {
-      "type": "component",
-      "repeatable": false,
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "component": "blocks.rich-text"
-    },
     "seo": {
       "type": "component",
       "repeatable": false,
@@ -149,6 +139,18 @@
           "localized": true
         }
       }
+    },
+    "content": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "customField",
+      "options": {
+        "preset": "defaultHtml"
+      },
+      "customField": "plugin::ckeditor5.CKEditor"
     }
   }
 }

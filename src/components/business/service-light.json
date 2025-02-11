@@ -24,18 +24,17 @@
     "description": {
       "type": "text"
     },
-    "content": {
-      "type": "customField",
-      "options": {
-        "output": "HTML",
-        "preset": "light"
-      },
-      "customField": "plugin::ckeditor.CKEditor"
-    },
     "seo": {
       "type": "component",
       "repeatable": false,
       "component": "shared.seo"
+    },
+    "content": {
+      "type": "customField",
+      "options": {
+        "preset": "defaultHtml"
+      },
+      "customField": "plugin::ckeditor5.CKEditor"
     }
   }
 }
