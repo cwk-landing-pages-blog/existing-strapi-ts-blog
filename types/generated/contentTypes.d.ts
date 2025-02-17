@@ -417,6 +417,39 @@ export interface ApiAromaRestaurantAromaRestaurant
   };
 }
 
+export interface ApiAyahAyah extends Struct.CollectionTypeSchema {
+  collectionName: 'ayahs';
+  info: {
+    description: '';
+    displayName: 'ayah';
+    pluralName: 'ayahs';
+    singularName: 'ayah';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    arabic: Schema.Attribute.Text & Schema.Attribute.Required;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    isSexhdeAyah: Schema.Attribute.Boolean &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<false>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<'oneToMany', 'api::ayah.ayah'> &
+      Schema.Attribute.Private;
+    order: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    tefsir: Schema.Attribute.Component<'shared.tefsir', true>;
+    translated: Schema.Attribute.Text & Schema.Attribute.Required;
+    transliteration: Schema.Attribute.Text;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiCodingTechCodingTech extends Struct.CollectionTypeSchema {
   collectionName: 'coding_techs';
   info: {
@@ -734,6 +767,115 @@ export interface ApiIdrizTravelUmraIdrizTravelUmra
   };
 }
 
+export interface ApiKuranPageKuranPage extends Struct.CollectionTypeSchema {
+  collectionName: 'kuran_pages';
+  info: {
+    description: '';
+    displayName: 'Kuran Page';
+    pluralName: 'kuran-pages';
+    singularName: 'kuran-page';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    ayahs: Schema.Attribute.Component<'quran.page-ayah', true>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    cuz: Schema.Attribute.Enumeration<
+      [
+        'cuz-1',
+        'cuz-2',
+        'cuz-3',
+        'cuz-4',
+        'cuz-5',
+        'cuz-6',
+        'cuz-7',
+        'cuz-8',
+        'cuz-9',
+        'cuz-10',
+        'cuz-11',
+        'cuz-12',
+        'cuz-13',
+        'cuz-14',
+        'cuz-15',
+        'cuz-16',
+        'cuz-17',
+        'cuz-18',
+        'cuz-19',
+        'cuz-20',
+        'cuz-21',
+        'cuz-22',
+        'cuz-23',
+        'cuz-24',
+        'cuz-25',
+        'cuz-26',
+        'cuz-27',
+        'cuz-28',
+        'cuz-29',
+        'cuz-30',
+      ]
+    >;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::kuran-page.kuran-page'
+    > &
+      Schema.Attribute.Private;
+    page: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    slug: Schema.Attribute.UID;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiMufassirMufassir extends Struct.CollectionTypeSchema {
+  collectionName: 'mufassirs';
+  info: {
+    description: '';
+    displayName: 'Mufassir ';
+    pluralName: 'mufassirs';
+    singularName: 'mufassir';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    about: Schema.Attribute.RichText &
+      Schema.Attribute.CustomField<
+        'plugin::ckeditor5.CKEditor',
+        {
+          preset: 'defaultHtml';
+        }
+      >;
+    avatar: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    desc: Schema.Attribute.Text;
+    email: Schema.Attribute.String;
+    fullName: Schema.Attribute.String & Schema.Attribute.Required;
+    isActive: Schema.Attribute.Boolean &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<true>;
+    joined: Schema.Attribute.Date;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::mufassir.mufassir'
+    > &
+      Schema.Attribute.Private;
+    password: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiPreventivItemPreventivItem
   extends Struct.CollectionTypeSchema {
   collectionName: 'preventiv_items';
@@ -825,6 +967,57 @@ export interface ApiPreventivPreventiv extends Struct.CollectionTypeSchema {
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     validDate: Schema.Attribute.Date;
+  };
+}
+
+export interface ApiSurahSurah extends Struct.CollectionTypeSchema {
+  collectionName: 'surahs';
+  info: {
+    description: '';
+    displayName: 'Surah';
+    pluralName: 'surahs';
+    singularName: 'surah';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    ayahs: Schema.Attribute.Component<'quran.surah-ayahs', true>;
+    characters: Schema.Attribute.Integer & Schema.Attribute.Required;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    hasBesmele: Schema.Attribute.Boolean &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<true>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<'oneToMany', 'api::surah.surah'> &
+      Schema.Attribute.Private;
+    name: Schema.Attribute.String & Schema.Attribute.Required;
+    numberAyahs: Schema.Attribute.Integer & Schema.Attribute.Required;
+    publishedAt: Schema.Attribute.DateTime;
+    surahOrder: Schema.Attribute.Integer &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetMinMax<
+        {
+          max: 114;
+          min: 1;
+        },
+        number
+      >;
+    tafsir: Schema.Attribute.RichText &
+      Schema.Attribute.CustomField<
+        'plugin::ckeditor5.CKEditor',
+        {
+          preset: 'defaultHtml';
+        }
+      >;
+    translatedName: Schema.Attribute.String & Schema.Attribute.Required;
+    type: Schema.Attribute.Enumeration<['mekke', 'medina', 'mekke-medina']>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    wordsNumber: Schema.Attribute.Integer & Schema.Attribute.Required;
   };
 }
 
@@ -1484,6 +1677,7 @@ declare module '@strapi/strapi' {
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
       'api::aroma-restaurant.aroma-restaurant': ApiAromaRestaurantAromaRestaurant;
+      'api::ayah.ayah': ApiAyahAyah;
       'api::coding-tech.coding-tech': ApiCodingTechCodingTech;
       'api::cwk-user.cwk-user': ApiCwkUserCwkUser;
       'api::cwk.cwk': ApiCwkCwk;
@@ -1491,8 +1685,11 @@ declare module '@strapi/strapi' {
       'api::endry-cliente.endry-cliente': ApiEndryClienteEndryCliente;
       'api::guestbook.guestbook': ApiGuestbookGuestbook;
       'api::idriz-travel-umra.idriz-travel-umra': ApiIdrizTravelUmraIdrizTravelUmra;
+      'api::kuran-page.kuran-page': ApiKuranPageKuranPage;
+      'api::mufassir.mufassir': ApiMufassirMufassir;
       'api::preventiv-item.preventiv-item': ApiPreventivItemPreventivItem;
       'api::preventiv.preventiv': ApiPreventivPreventiv;
+      'api::surah.surah': ApiSurahSurah;
       'api::umrah-trip.umrah-trip': ApiUmrahTripUmrahTrip;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;

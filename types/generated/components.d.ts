@@ -434,6 +434,34 @@ export interface IdrizUmrahBlockUmrahPrice extends Struct.ComponentSchema {
   };
 }
 
+export interface QuranPageAyah extends Struct.ComponentSchema {
+  collectionName: 'components_quran_page_ayahs';
+  info: {
+    description: '';
+    displayName: 'pageAyah';
+  };
+  attributes: {
+    ayah: Schema.Attribute.Relation<'oneToOne', 'api::ayah.ayah'>;
+    hasSureStart: Schema.Attribute.Boolean &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<false>;
+    surah: Schema.Attribute.Relation<'oneToOne', 'api::surah.surah'>;
+    text: Schema.Attribute.String;
+  };
+}
+
+export interface QuranSurahAyahs extends Struct.ComponentSchema {
+  collectionName: 'components_quran_surah_ayahs';
+  info: {
+    displayName: 'surahAyahs';
+    icon: 'brush';
+  };
+  attributes: {
+    ayah: Schema.Attribute.Relation<'oneToOne', 'api::ayah.ayah'>;
+    title: Schema.Attribute.String;
+  };
+}
+
 export interface SharedFaq extends Struct.ComponentSchema {
   collectionName: 'components_shared_faqs';
   info: {
@@ -526,6 +554,24 @@ export interface SharedSocialNetworks extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedTefsir extends Struct.ComponentSchema {
+  collectionName: 'components_shared_tefsirs';
+  info: {
+    displayName: 'tefsir';
+    icon: 'dashboard';
+  };
+  attributes: {
+    content: Schema.Attribute.RichText &
+      Schema.Attribute.CustomField<
+        'plugin::ckeditor5.CKEditor',
+        {
+          preset: 'defaultHtml';
+        }
+      >;
+    mufassir: Schema.Attribute.Relation<'oneToOne', 'api::mufassir.mufassir'>;
+  };
+}
+
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
@@ -550,11 +596,14 @@ declare module '@strapi/strapi' {
       'idriz-umrah-block.info': IdrizUmrahBlockInfo;
       'idriz-umrah-block.ramadan': IdrizUmrahBlockRamadan;
       'idriz-umrah-block.umrah-price': IdrizUmrahBlockUmrahPrice;
+      'quran.page-ayah': QuranPageAyah;
+      'quran.surah-ayahs': QuranSurahAyahs;
       'shared.faq': SharedFaq;
       'shared.quote': SharedQuote;
       'shared.rich-text': SharedRichText;
       'shared.seo': SharedSeo;
       'shared.social-networks': SharedSocialNetworks;
+      'shared.tefsir': SharedTefsir;
     }
   }
 }

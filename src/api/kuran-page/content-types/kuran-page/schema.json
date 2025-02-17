@@ -1,0 +1,63 @@
+{
+  "kind": "collectionType",
+  "collectionName": "kuran_pages",
+  "info": {
+    "singularName": "kuran-page",
+    "pluralName": "kuran-pages",
+    "displayName": "Kuran Page",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "page": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "uid"
+    },
+    "ayahs": {
+      "displayName": "pageAyah",
+      "type": "component",
+      "repeatable": true,
+      "component": "quran.page-ayah"
+    },
+    "cuz": {
+      "type": "enumeration",
+      "enum": [
+        "cuz-1",
+        "cuz-2",
+        "cuz-3",
+        "cuz-4",
+        "cuz-5",
+        "cuz-6",
+        "cuz-7",
+        "cuz-8",
+        "cuz-9",
+        "cuz-10",
+        "cuz-11",
+        "cuz-12",
+        "cuz-13",
+        "cuz-14",
+        "cuz-15",
+        "cuz-16",
+        "cuz-17",
+        "cuz-18",
+        "cuz-19",
+        "cuz-20",
+        "cuz-21",
+        "cuz-22",
+        "cuz-23",
+        "cuz-24",
+        "cuz-25",
+        "cuz-26",
+        "cuz-27",
+        "cuz-28",
+        "cuz-29",
+        "cuz-30"
+      ]
+    }
+  }
+}

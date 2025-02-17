@@ -1,0 +1,68 @@
+{
+  "kind": "collectionType",
+  "collectionName": "surahs",
+  "info": {
+    "singularName": "surah",
+    "pluralName": "surahs",
+    "displayName": "Surah",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "tafsir": {
+      "type": "customField",
+      "options": {
+        "preset": "defaultHtml"
+      },
+      "customField": "plugin::ckeditor5.CKEditor"
+    },
+    "ayahs": {
+      "displayName": "surahAyahs",
+      "type": "component",
+      "repeatable": true,
+      "component": "quran.surah-ayahs"
+    },
+    "hasBesmele": {
+      "type": "boolean",
+      "default": true,
+      "required": true
+    },
+    "translatedName": {
+      "type": "string",
+      "required": true
+    },
+    "surahOrder": {
+      "type": "integer",
+      "required": true,
+      "min": 1,
+      "max": 114
+    },
+    "numberAyahs": {
+      "type": "integer",
+      "required": true
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "mekke",
+        "medina",
+        "mekke-medina"
+      ]
+    },
+    "wordsNumber": {
+      "type": "integer",
+      "required": true
+    },
+    "characters": {
+      "type": "integer",
+      "required": true
+    }
+  }
+}

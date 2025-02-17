@@ -1,0 +1,41 @@
+{
+  "kind": "collectionType",
+  "collectionName": "ayahs",
+  "info": {
+    "singularName": "ayah",
+    "pluralName": "ayahs",
+    "displayName": "ayah",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "order": {
+      "type": "string"
+    },
+    "translated": {
+      "type": "text",
+      "required": true
+    },
+    "transliteration": {
+      "type": "text"
+    },
+    "isSexhdeAyah": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "tefsir": {
+      "displayName": "tefsir",
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.tefsir"
+    },
+    "arabic": {
+      "type": "text",
+      "required": true
+    }
+  }
+}

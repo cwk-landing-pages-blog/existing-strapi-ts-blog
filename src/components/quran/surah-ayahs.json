@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_quran_surah_ayahs",
+  "info": {
+    "displayName": "surahAyahs",
+    "icon": "brush"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "ayah": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::ayah.ayah"
+    }
+  }
+}

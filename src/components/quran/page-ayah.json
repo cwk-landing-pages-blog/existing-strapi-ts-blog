@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_quran_page_ayahs",
+  "info": {
+    "displayName": "pageAyah",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "string"
+    },
+    "ayah": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::ayah.ayah"
+    },
+    "hasSureStart": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "surah": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::surah.surah"
+    }
+  }
+}

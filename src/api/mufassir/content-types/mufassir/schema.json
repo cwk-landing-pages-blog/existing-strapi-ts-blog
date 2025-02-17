@@ -1,0 +1,52 @@
+{
+  "kind": "collectionType",
+  "collectionName": "mufassirs",
+  "info": {
+    "singularName": "mufassir",
+    "pluralName": "mufassirs",
+    "displayName": "Mufassir ",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "fullName": {
+      "type": "string",
+      "required": true
+    },
+    "desc": {
+      "type": "text"
+    },
+    "joined": {
+      "type": "date"
+    },
+    "isActive": {
+      "type": "boolean",
+      "default": true,
+      "required": true
+    },
+    "about": {
+      "type": "customField",
+      "options": {
+        "preset": "defaultHtml"
+      },
+      "customField": "plugin::ckeditor5.CKEditor"
+    },
+    "avatar": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "email": {
+      "type": "string"
+    },
+    "password": {
+      "type": "string"
+    }
+  }
+}
