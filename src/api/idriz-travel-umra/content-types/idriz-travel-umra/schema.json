@@ -29,6 +29,12 @@
       "type": "component",
       "repeatable": true,
       "component": "idriz-umrah-block.ramadan"
+    },
+    "socialPost": {
+      "displayName": "socialPost",
+      "type": "component",
+      "repeatable": true,
+      "component": "idriz-umrah-block.social-post"
     }
   }
 }

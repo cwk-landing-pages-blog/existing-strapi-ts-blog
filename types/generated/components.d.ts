@@ -418,6 +418,25 @@ export interface IdrizUmrahBlockRamadan extends Struct.ComponentSchema {
   };
 }
 
+export interface IdrizUmrahBlockSocialPost extends Struct.ComponentSchema {
+  collectionName: 'components_idriz_umrah_block_social_posts';
+  info: {
+    displayName: 'socialPost';
+  };
+  attributes: {
+    cover: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
+    gallery: Schema.Attribute.Media<'images' | 'videos', true>;
+    link: Schema.Attribute.String;
+    platform: Schema.Attribute.Enumeration<
+      ['instagram', 'tik-tok', 'facebook', 'linkedin', 'web']
+    > &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'facebook'>;
+    text: Schema.Attribute.Text;
+    title: Schema.Attribute.String;
+  };
+}
+
 export interface IdrizUmrahBlockUmrahPrice extends Struct.ComponentSchema {
   collectionName: 'components_idriz_umrah_block_umrah_prices';
   info: {
@@ -595,6 +614,7 @@ declare module '@strapi/strapi' {
       'cwk.job-experience': CwkJobExperience;
       'idriz-umrah-block.info': IdrizUmrahBlockInfo;
       'idriz-umrah-block.ramadan': IdrizUmrahBlockRamadan;
+      'idriz-umrah-block.social-post': IdrizUmrahBlockSocialPost;
       'idriz-umrah-block.umrah-price': IdrizUmrahBlockUmrahPrice;
       'quran.page-ayah': QuranPageAyah;
       'quran.surah-ayahs': QuranSurahAyahs;

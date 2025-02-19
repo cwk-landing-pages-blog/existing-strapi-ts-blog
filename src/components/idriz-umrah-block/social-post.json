@@ -1,0 +1,46 @@
+{
+  "collectionName": "components_idriz_umrah_block_social_posts",
+  "info": {
+    "displayName": "socialPost"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "text": {
+      "type": "text"
+    },
+    "gallery": {
+      "allowedTypes": [
+        "images",
+        "videos"
+      ],
+      "type": "media",
+      "multiple": true
+    },
+    "cover": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    },
+    "link": {
+      "type": "string"
+    },
+    "platform": {
+      "type": "enumeration",
+      "enum": [
+        "instagram",
+        "tik-tok",
+        "facebook",
+        "linkedin",
+        "web"
+      ],
+      "required": true,
+      "default": "facebook"
+    }
+  }
+}
