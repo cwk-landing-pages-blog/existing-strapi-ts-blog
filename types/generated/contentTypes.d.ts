@@ -1061,6 +1061,12 @@ export interface ApiUmrahTripUmrahTrip extends Struct.CollectionTypeSchema {
           localized: true;
         };
       }>;
+    cover: Schema.Attribute.Media<'images'> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: false;
+        };
+      }>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;

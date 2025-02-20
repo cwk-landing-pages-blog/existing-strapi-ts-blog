@@ -151,6 +151,19 @@
         "preset": "defaultHtml"
       },
       "customField": "plugin::ckeditor5.CKEditor"
+    },
+    "cover": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "required": false
     }
   }
 }
