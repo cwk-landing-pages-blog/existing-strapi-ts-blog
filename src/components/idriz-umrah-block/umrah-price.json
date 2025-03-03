@@ -1,7 +1,8 @@
 {
   "collectionName": "components_idriz_umrah_block_umrah_prices",
   "info": {
-    "displayName": "umrah-price"
+    "displayName": "umrah-price",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -24,10 +25,6 @@
         "roomX3",
         "roomX4"
       ]
-    },
-    "currency": {
-      "type": "string",
-      "default": "€"
     }
   }
 }

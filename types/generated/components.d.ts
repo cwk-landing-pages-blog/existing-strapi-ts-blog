@@ -54,6 +54,7 @@ export interface BlocksItem extends Struct.ComponentSchema {
 export interface BlocksPrice extends Struct.ComponentSchema {
   collectionName: 'components_blocks_prices';
   info: {
+    description: '';
     displayName: 'price';
   };
   attributes: {
@@ -63,7 +64,6 @@ export interface BlocksPrice extends Struct.ComponentSchema {
       Schema.Attribute.Required &
       Schema.Attribute.DefaultTo<false>;
     label: Schema.Attribute.String;
-    symbol: Schema.Attribute.String;
   };
 }
 
@@ -440,10 +440,10 @@ export interface IdrizUmrahBlockSocialPost extends Struct.ComponentSchema {
 export interface IdrizUmrahBlockUmrahPrice extends Struct.ComponentSchema {
   collectionName: 'components_idriz_umrah_block_umrah_prices';
   info: {
+    description: '';
     displayName: 'umrah-price';
   };
   attributes: {
-    currency: Schema.Attribute.String & Schema.Attribute.DefaultTo<'\u20AC'>;
     discounted_value: Schema.Attribute.Integer;
     isDiscounted: Schema.Attribute.Boolean &
       Schema.Attribute.Required &

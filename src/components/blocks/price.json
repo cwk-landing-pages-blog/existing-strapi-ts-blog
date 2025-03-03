@@ -1,13 +1,11 @@
 {
   "collectionName": "components_blocks_prices",
   "info": {
-    "displayName": "price"
+    "displayName": "price",
+    "description": ""
   },
   "options": {},
   "attributes": {
-    "symbol": {
-      "type": "string"
-    },
     "amount": {
       "type": "decimal"
     },
