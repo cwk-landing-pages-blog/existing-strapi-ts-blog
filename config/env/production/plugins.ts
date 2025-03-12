@@ -26,6 +26,7 @@ module.exports = ({ env }) => ({
 				api_key: env('CLOUDINARY_KEY'),
 
 				api_secret: env('CLOUDINARY_SECRET'),
+				secure: true,
 			},
 
 			actionOptions: {
