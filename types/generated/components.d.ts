@@ -51,6 +51,20 @@ export interface BlocksItem extends Struct.ComponentSchema {
   };
 }
 
+export interface BlocksLink extends Struct.ComponentSchema {
+  collectionName: 'components_blocks_links';
+  info: {
+    displayName: 'link';
+  };
+  attributes: {
+    href: Schema.Attribute.String & Schema.Attribute.Required;
+    icon: Schema.Attribute.Enumeration<['web', 'native-app', 'github']> &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'web'>;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
 export interface BlocksPrice extends Struct.ComponentSchema {
   collectionName: 'components_blocks_prices';
   info: {
@@ -597,6 +611,7 @@ declare module '@strapi/strapi' {
       'blocks.block': BlocksBlock;
       'blocks.cta': BlocksCta;
       'blocks.item': BlocksItem;
+      'blocks.link': BlocksLink;
       'blocks.price': BlocksPrice;
       'blocks.project-item': BlocksProjectItem;
       'blocks.section-title': BlocksSectionTitle;

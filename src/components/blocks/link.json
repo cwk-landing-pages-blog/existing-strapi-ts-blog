@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_blocks_links",
+  "info": {
+    "displayName": "link"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "href": {
+      "type": "string",
+      "required": true
+    },
+    "icon": {
+      "type": "enumeration",
+      "enum": [
+        "web",
+        "native-app",
+        "github"
+      ],
+      "required": true,
+      "default": "web"
+    }
+  }
+}

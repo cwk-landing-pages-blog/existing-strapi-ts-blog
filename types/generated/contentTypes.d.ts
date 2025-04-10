@@ -369,54 +369,6 @@ export interface AdminUser extends Struct.CollectionTypeSchema {
   };
 }
 
-export interface ApiAromaRestaurantAromaRestaurant
-  extends Struct.SingleTypeSchema {
-  collectionName: 'aroma_restaurants';
-  info: {
-    description: '';
-    displayName: 'Aroma Restaurant';
-    pluralName: 'aroma-restaurants';
-    singularName: 'aroma-restaurant';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    contacts: Schema.Attribute.Component<'business.contact', true>;
-    createdAt: Schema.Attribute.DateTime;
-    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    description: Schema.Attribute.Text;
-    google_map_location: Schema.Attribute.Component<
-      'business.google-map-location',
-      false
-    >;
-    heros: Schema.Attribute.Component<'business.hero', true>;
-    locale: Schema.Attribute.String & Schema.Attribute.Private;
-    localizations: Schema.Attribute.Relation<
-      'oneToMany',
-      'api::aroma-restaurant.aroma-restaurant'
-    > &
-      Schema.Attribute.Private;
-    menu_items: Schema.Attribute.Component<'business.menu-item', true>;
-    menu_title: Schema.Attribute.Component<'blocks.section-title', false>;
-    name: Schema.Attribute.String;
-    open_hours: Schema.Attribute.Component<'business.open-hours', false>;
-    our_story_title: Schema.Attribute.Component<'blocks.section-title', false>;
-    our_strength: Schema.Attribute.Component<'blocks.section-title', false>;
-    publishedAt: Schema.Attribute.DateTime;
-    services_items: Schema.Attribute.Component<'business.service-item', true>;
-    services_title: Schema.Attribute.Component<'blocks.section-title', false>;
-    social_networks: Schema.Attribute.Component<'shared.social-networks', true>;
-    special_section: Schema.Attribute.Component<'blocks.section-title', false>;
-    updatedAt: Schema.Attribute.DateTime;
-    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    we_offer_items: Schema.Attribute.Component<'business.service-item', true>;
-    we_offer_title: Schema.Attribute.Component<'blocks.section-title', false>;
-  };
-}
-
 export interface ApiAyahAyah extends Struct.CollectionTypeSchema {
   collectionName: 'ayahs';
   info: {
@@ -971,6 +923,40 @@ export interface ApiPreventivPreventiv extends Struct.CollectionTypeSchema {
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     validDate: Schema.Attribute.Date;
+  };
+}
+
+export interface ApiProjectProject extends Struct.CollectionTypeSchema {
+  collectionName: 'projects';
+  info: {
+    displayName: 'project';
+    pluralName: 'projects';
+    singularName: 'project';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    cover: Schema.Attribute.Media<'images', true> & Schema.Attribute.Required;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    desc: Schema.Attribute.Text;
+    isFinished: Schema.Attribute.Boolean &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<false>;
+    links: Schema.Attribute.Component<'blocks.link', true>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::project.project'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
   };
 }
 
@@ -1680,7 +1666,6 @@ declare module '@strapi/strapi' {
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
-      'api::aroma-restaurant.aroma-restaurant': ApiAromaRestaurantAromaRestaurant;
       'api::ayah.ayah': ApiAyahAyah;
       'api::coding-tech.coding-tech': ApiCodingTechCodingTech;
       'api::cwk-user.cwk-user': ApiCwkUserCwkUser;
@@ -1693,6 +1678,7 @@ declare module '@strapi/strapi' {
       'api::mufassir.mufassir': ApiMufassirMufassir;
       'api::preventiv-item.preventiv-item': ApiPreventivItemPreventivItem;
       'api::preventiv.preventiv': ApiPreventivPreventiv;
+      'api::project.project': ApiProjectProject;
       'api::surah.surah': ApiSurahSurah;
       'api::umrah-trip.umrah-trip': ApiUmrahTripUmrahTrip;
       'plugin::content-releases.release': PluginContentReleasesRelease;
